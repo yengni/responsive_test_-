@@ -1,0 +1,22 @@
+* {box-sizing:border-box; margin:0; padding:0; font-size:1.0em; color:#000; text-decoration:none;}
+header {display:flex; justify-content: space-between; padding:0 15px; align-items: center; height:60px; position:relative;}
+header .left a {text-transform: uppercase; font-weight:600; margin:0 5px;} /* CSS수정-부모태그 left 누락 */
+header h1 {width:150px; position:absolute; left:50%; transform:translateX(-50%);}  
+header h1 a {}
+header h1 a img {width: 100%;} /* CSS수정-로고 이미지는 h1>a 자식태그 */ /* 이미지 크기 수정 */
+header .right a {
+    text-transform: uppercase; font-weight:600; margin:0 5px;
+}/* CSS수정- right a 태그 효과 입력 */
+main .visual {
+    background:url(./images/visual.gif) center 6%/ cover; /* CSS수정-img 경로 수정 */ /* 이미지 크기 수정-cover 설정 */
+    height:350px; width:100%;
+}
+main h2 {text-align:center; padding:30px 0; text-transform: capitalize;}
+main .link {max-width:1400px; margin:0 auto; display:flex;} /* CSS수정-중앙배열 margin:0 auto; 설정 */
+main .link a img {width: 100%;} /* 이미지 크기 수정 */
+
+@media screen and (max-width:1400px)/* CSS수정- ; 삭제 */{
+    header .left, 
+    header .right {display:none;}
+    main .link {padding:0 15px;}
+}/* CSS수정- } 누락 */
